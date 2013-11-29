@@ -32,9 +32,9 @@ I wanted something simple to choose between Netflix and Plex upon start-up, and 
 Hotsoup will use JPG images in the _Wallpapers_ sub-folder as backgrounds, selecting a new one upon each start-up.
 
 ## Command-line arguments
-* Open application in window with frame:
+Open application in window with frame:
 	Hotsoup.exe /WindowMode
-* Use spesific configuration file:
+Use spesific configuration file:
 	Hotsoup.exe full/path/to/configfile.xml
 
 ## Issues

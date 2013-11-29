@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Hotsoup>
+  
+  <!--Application settings here-->
+  <Settings>
+    <AutoStart Enabled="True" AppKey="Plex" Delay="60" />
+    <Shutdown Enabled="True" Delay="10" />
+  </Settings>
+  
+  <!--Specify any applications you like, values and node name is just examples-->
+  <Applications>
+    <Plex Enabled="True" Executable="C:\Program Files (x86)\Plex Home Theater\Plex Home Theater.exe" Icon="plex_icon.png" Label="Plex Home Theater" />
+    <Spotify Enabled="True" Executable="C:\Path\to\Executable" Icon="spotify_icon.png" />
+    <NetFlix Enabled="True" Executable="C:\Path\to\Executable" Icon="netflix_icon.png" />
+    <Chrome Enabled="True" Executable="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" Icon="chrome_icon.png" Label="Google Chrome" />
+  </Applications>
+  
+  <!--Trakt settings and username for getting statistics-->
+  <Trakt.tv>
+    <Connection Enabled="False" Timeout="30" />
+    <AutoUpdate Enabled="True" MinuteInterval="60" />
+    <Trending Enabled="True" Count="10" />
+    <User Name="username" Password="password" />
+  </Trakt.tv>
+  
+</Hotsoup>

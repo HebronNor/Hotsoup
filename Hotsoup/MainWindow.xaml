@@ -1,0 +1,55 @@
+﻿<Window x:Class="Hotsoup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Home Theater Startup" Height="900" Width="1440" WindowStyle="None" WindowState="Maximized" Icon="Icons/disk_dark_media.ico" Closing="Window_Closing" MinWidth="1440" MinHeight="900">
+    <Grid x:Name="mainGrid" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="gridButtons" HorizontalAlignment="Center" Height="300" Margin="0,0,0,250" VerticalAlignment="Bottom" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnApp0" HorizontalAlignment="Center" Margin="20,0" VerticalAlignment="Center" Width="240" Height="240" Foreground="{x:Null}" Click="StartApp_Click" Style="{StaticResource FadeOutButton}" Opacity="0.75" TabIndex="0">
+                <Image Stretch="Uniform" Source="Icons/app_icon.png"/>
+            </Button>
+            <Button x:Name="btnApp1" HorizontalAlignment="Center" Margin="20,0" VerticalAlignment="Center" Width="240" Height="240" Foreground="{x:Null}" Click="StartApp_Click" Style="{StaticResource FadeOutButton}" Opacity="0.75" Grid.Column="1" TabIndex="1">
+                <Image Stretch="Uniform" Source="Icons/app_icon.png"/>
+            </Button>
+            <Button x:Name="btnApp2" HorizontalAlignment="Center" Margin="20,0" VerticalAlignment="Center" Width="240" Height="240" Foreground="{x:Null}" Click="StartApp_Click" Style="{StaticResource FadeOutButton}" Opacity="0.75" Grid.Column="2" TabIndex="2">
+                <Image Stretch="Uniform" Source="Icons/app_icon.png"/>
+            </Button>
+            <Button x:Name="btnApp3" HorizontalAlignment="Center" Margin="20,0" VerticalAlignment="Center" Width="240" Height="240" Foreground="{x:Null}" Click="StartApp_Click" Style="{StaticResource FadeOutButton}" Opacity="0.75" Grid.Column="3" TabIndex="3">
+                <Image Stretch="Uniform" Source="Icons/app_icon.png"/>
+            </Button>
+            <Button x:Name="btnShutDown" HorizontalAlignment="Center" Margin="20,0" VerticalAlignment="Center" Width="240" Height="240" Foreground="{x:Null}" Click="ShutDown_Click" Style="{StaticResource FadeOutButton}" Opacity="0.75" Grid.Column="4" TabIndex="4">
+                <Image Stretch="Uniform" Source="Icons/app_icon.png"/>
+            </Button>
+        </Grid>
+        <Label x:Name="lblPlexStart" Content="Label" HorizontalAlignment="Center" Margin="0,0,0,20" VerticalAlignment="Bottom" Foreground="White" FontSize="20" Background="Black" Opacity="0.6" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Center" Height="10" Margin="0,0,0,3" VerticalAlignment="Bottom" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Opacity="0.6" BorderThickness="0" Foreground="#FF01D328" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="buttonCancelPlex" HorizontalAlignment="Center" Margin="0,0,0,60" VerticalAlignment="Bottom" Width="50" Foreground="{x:Null}" Style="{StaticResource FadeOutButton2}" Opacity="0.25" Click="AbortStart_Click" Grid.Column="1" Grid.ColumnSpan="2" TabIndex="4">
+            <Image Stretch="Uniform" Source="Icons/cancel_icon.png" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Bottom" ToolTip="Cancel auto-start"/>
+        </Button>
+
+        <TextBox x:Name="textStatus" HorizontalAlignment="Center" Margin="0,0,0,125" TextWrapping="Wrap" Text="Status" VerticalAlignment="Bottom" Background="Black" BorderBrush="{x:Null}" Foreground="White" TextAlignment="Center" FontSize="20" Style="{DynamicResource FadeText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Grid.Column="1" Grid.ColumnSpan="2" Padding="5" />
+        <TextBox x:Name="txtAirDates" HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1,5,5" />
+        <TextBox x:Name="txtUnwatched" HorizontalAlignment="Right" Margin="0,42,9,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1,5,5" TextAlignment="Right" Grid.Column="3" />
+        <TextBox x:Name="txtTrendMovies" HorizontalAlignment="Center" Margin="0,42,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1,5,5" Grid.Column="1" TextAlignment="Center" />
+        <TextBox x:Name="txtTrendShows" HorizontalAlignment="Center" Margin="0,42,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1,5,5" Grid.Column="2" TextAlignment="Center" />
+        <TextBox x:Name="txtAirDatesHeader" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Header" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1" FontWeight="Bold" />
+        <TextBox x:Name="txtTrendMoviesHeader" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Header" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1" FontWeight="Bold" Grid.Column="1" TextAlignment="Center" />
+        <TextBox x:Name="txtTrendShowsHeader" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Header" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1" FontWeight="Bold" Grid.Column="2" TextAlignment="Center" />
+        <TextBox x:Name="txtUnwatchedHeader" HorizontalAlignment="Right" Margin="0,10,10,0" TextWrapping="Wrap" Text="Header" VerticalAlignment="Top" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="20" Style="{DynamicResource FadeInText}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5,1" FontWeight="Bold" Grid.Column="3" TextAlignment="Right" />
+        <TextBox x:Name="textHotsoup" HorizontalAlignment="Left" Margin="10,0,0,10" TextWrapping="Wrap" Text="Status" VerticalAlignment="Bottom" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="14" Style="{DynamicResource FadeTextQuick}" IsReadOnly="True" SelectionBrush="{x:Null}" BorderThickness="0" Padding="5" />
+
+    </Grid>
+</Window>

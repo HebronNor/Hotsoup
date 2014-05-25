@@ -16,9 +16,16 @@ It was the first word that popped into my mind when looking at the full project 
 &nbsp;&nbsp;
 <img src="https://mgpqvq.bn1.livefilestore.com/y2pEsT8zyhLjaFQ6PuSG6q4npSsdXPzpwTlpwfpesCUW10d3Uj6uLXjvatRq6YGLGUCqmkg1Yy3HD-VxtmjSzeGBMKDT9lPD3zom1Fg6JxcADg/Hotsoup_screen2.jpg?psid=1" width="400">
 
-## Requirements
+## Installation
+No installation is required; simply unpack the release binary files (`Hotsoup_vX.X.X.zip`) to a folder of your choosing.
+
+### Requirements
 * Windows 7
 * .NET Framework 4.5
+
+## Upgrade
+To upgrade your version of Hotsoup; unpack the release binary files (Hotsoup_vX.X.X.zip`) to the folder containing your current version. Some files will be overwritten, but your configuration will not be affected.
+Make sure Hotsoup is not running during the upgrade.
 
 ## Configuration
 

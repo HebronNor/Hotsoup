@@ -24,7 +24,7 @@ No installation is required; simply unpack the release binary files (`Hotsoup_vX
 * .NET Framework 4.5
 
 ## Upgrade
-To upgrade your version of Hotsoup; unpack the release binary files (Hotsoup_vX.X.X.zip`) to the folder containing your current version. Some files will be overwritten, but your configuration will not be affected.
+To upgrade your version of Hotsoup; unpack the release binary files (`Hotsoup_vX.X.X.zip`) to the folder containing your current version. Some files will be overwritten, but your configuration will not be affected.
 Make sure Hotsoup is not running during the upgrade.
 
 ## Configuration

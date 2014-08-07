@@ -108,18 +108,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <Content Include="CHANGES.md">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <Content Include="README.md">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Wallpapers\README.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -161,16 +155,13 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)README.md" $(SolutionDir)
-copy "$(ProjectDir)CHANGES.md" $(SolutionDir)
-
-mkdir $(TargetDir)Release
+    <PostBuildEvent>mkdir $(TargetDir)Release
 copy $(TargetPath) $(TargetDir)Release
 copy $(ProjectDir)$(ProjectName).xml $(TargetDir)Release
 copy $(TargetDir)Newtonsoft.Json.dll $(TargetDir)Release
-copy $(ProjectDir)README.md $(TargetDir)Release
-copy $(ProjectDir)CHANGES.md $(TargetDir)Release
-
+copy $(SolutionDir)README.md $(TargetDir)Release
+copy $(SolutionDir)CHANGES.md $(TargetDir)Release
+copy $(SolutionDir)LICENSE $(TargetDir)Release
 mkdir $(TargetDir)Release\Icons
 copy $(ProjectDir)Icons $(TargetDir)Release\Icons
 

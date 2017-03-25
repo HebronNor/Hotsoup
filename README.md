@@ -12,9 +12,8 @@ I wanted something simple to choose between Netflix and Plex upon start-up, and 
 It was the first word that popped into my mind when looking at the full project name; Home Theater Start-up.
 
 ## Screenshots
-<img src="https://s3-eu-west-1.amazonaws.com/thomasjsn/public/github/hotsoup/hotsoup_screen1.jpg" width="400">
-&nbsp;&nbsp;
-<img src="https://s3-eu-west-1.amazonaws.com/thomasjsn/public/github/hotsoup/hotsoup_screen2.jpg" width="400">
+![Screenshot](http://i.imgur.com/clwVCJjl.jpg)
+![Screenshot](http://i.imgur.com/hLWAqYJl.jpg)
 
 ## Installation
 No installation is required; simply unpack the release binary files (`Hotsoup_vX.X.X.zip`) to a folder of your choosing.
